@@ -66,8 +66,8 @@ I created the repository named <code>aeop_program</code>.
 <h2>
 <a id="installing-git-into-your-computer" class="anchor" href="#installing-git-into-your-computer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing git into your computer</h2>
 
-<h3>
-<a id="for-windows" class="anchor" href="#for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For windows,</h3>
+<h4>
+<a id="for-windows" class="anchor" href="#for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For windows,</h4>
 
 <p>Go to the below link and then download and install <code>git-scm</code></p>
 
@@ -76,8 +76,12 @@ I created the repository named <code>aeop_program</code>.
 
 <p>You are on your desired folder to create a git repository. You just need to right click on the white part and then click on “Git Bash Here”.</p>
 
-<p>For <code>linux</code>,
-Open the terminal and install git as,</p>
+<p><img src="images/5_after_installation_in_windows.png" alt="Git bash"></p>
+
+<h4>
+<a id="for-linux" class="anchor" href="#for-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For <code>linux</code>,</h4>
+
+<p>Open the terminal and install git as,</p>
 
 <pre><code>$ sudo apt-get install git
 </code></pre>
@@ -87,11 +91,18 @@ Open the terminal and install git as,</p>
 
 <p>This configuration is the one-time configuration. You need to config your name and e-mail so that git can keep track of the person who commits the files.</p>
 
-<pre><code>git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+<pre><code>$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
 </code></pre>
 
+<p><img src="images/4_1_configuration_git.PNG" alt="Git configuration"></p>
+
 <p>To check whether your configuration was set up properly or not.</p>
+
+<pre><code>$ git config --all
+</code></pre>
+
+<p><img src="images/4_2_check_git_config.PNG" alt="Git config check"></p>
 
 <h2>
 <a id="create-a-local-git-folder-and-then-committing-your-filesfolders" class="anchor" href="#create-a-local-git-folder-and-then-committing-your-filesfolders" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create a local git folder and then committing your files/folders</h2>
@@ -101,22 +112,51 @@ git config --global user.name "Your Name"
 
 <p>We create a git repository on our local machine.</p>
 
+<pre><code>$ git init
+</code></pre>
+
+<p><img src="images/6_initializing_git_repository.PNG" alt="Git init"></p>
+
 <p>A new hidden folder <code>.git</code> will now be created in your initialized directory. Git stores its database and configuration information in that folder to keep track of your project.</p>
 
 <h3>
 <a id="checking-the-status-of-the-repository" class="anchor" href="#checking-the-status-of-the-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Checking the status of the repository</h3>
 
+<pre><code>$ git status
+</code></pre>
+
 <p>If you file has not been added, then it will be taken as <code>untracked</code> files.</p>
+
+<p><img src="images/7_checking_git_status.PNG" alt="Git status"></p>
 
 <h3>
 <a id="adding-a-filesfolders-in-the-repository" class="anchor" href="#adding-a-filesfolders-in-the-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding a files/folders in the repository</h3>
 
+<p>In order to add the files and/or folders, you use the following command as,</p>
+
+<pre><code>$ git add helloworld.c
+</code></pre>
+
+<p>If you want to add all the files/folders then,</p>
+
+<pre><code>$ git add *
+</code></pre>
+
 <p>Once you have added your files, your files are ready to be committed.</p>
+
+<p><img src="images/8_adding_file.PNG" alt="Git add files/folders"></p>
 
 <h3>
 <a id="your-first-commit" class="anchor" href="#your-first-commit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Your first commit</h3>
 
+<p>To commit the staged files, you need to provide the message in commit as,</p>
+
+<pre><code>$ git commit -m "My First Commit"
+</code></pre>
+
 <p>You just made your first commit. However, your repository is just in your local machine right now. So, in order to add your files in the repository that you created in your GitHub account, you connect your git folder to the remote repository in <code>www.github.com</code></p>
+
+<p><img src="images/9_connecting_repo_to_remote_github.PNG" alt="Git add repo"></p>
 
 <h3>
 <a id="push-your-content-to-the-remote-repository" class="anchor" href="#push-your-content-to-the-remote-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Push your content to the remote repository</h3>
