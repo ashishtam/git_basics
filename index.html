@@ -196,6 +196,93 @@ $ git config --global user.name "Your Name"
 
 <p><img src="images/12_Pulling_the_content_from_repo.PNG" alt="Git pull"></p>
 
+<h2>
+<a id="additional-stuffs" class="anchor" href="#additional-stuffs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional Stuffs...</h2>
+
+<h3>
+<a id="git-log" class="anchor" href="#git-log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git log</h3>
+
+<p>It displays all your commits in the order you have done. It’s just like viewing your history of the repository. It also displays other information about HEAD which helps you to revert to that commit if anything wrong has happened to your code.</p>
+
+<pre><code>$ git log
+</code></pre>
+
+<h3>
+<a id="git-branchingcheckoutmerge" class="anchor" href="#git-branchingcheckoutmerge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git branching/checkout/merge</h3>
+
+<h4>
+<a id="why-branching" class="anchor" href="#why-branching" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why branching?</h4>
+
+<ul>
+<li>It’s helps to isolate our features from each other.</li>
+<li>In default, we have only single branch when we create the repository. The name of that branch is <code>master</code>
+</li>
+</ul>
+
+<p>To check the list of branch, </p>
+
+<pre><code>$ git branch
+</code></pre>
+
+<p>To create the new branch,</p>
+
+<pre><code>$ git branch feature1
+</code></pre>
+
+<p>To switch (checkout) to the newly created branch,</p>
+
+<pre><code>$ git checkout feature1
+</code></pre>
+
+<p>You can work on <code>feature1</code> branch and even push to the repository. You can switch back to the <code>master branch</code> and then merge that <code>feature</code> branch to <code>master</code> branch.</p>
+
+<p>Displays the list of branches and the current branch it is on.</p>
+
+<pre><code>$ git branch
+</code></pre>
+
+<p>Adds the <code>myName.txt</code> file, commits the file and push into <code>feature1</code> branch.</p>
+
+<p><code>$ git add myName.txt</code>
+<code>$ git commit -m “MyName.txt file added.”</code>
+<code>$ git push origin feature1</code></p>
+
+<p>To return back to master branch,</p>
+
+<pre><code>$ git checkout master
+</code></pre>
+
+<p>To check the branch in which it currently is,</p>
+
+<pre><code>$ git branch
+</code></pre>
+
+<p>To merge the recently made feature branch,</p>
+
+<pre><code>$ git merge feature1
+</code></pre>
+
+<p>To update the remote repository by pushing into master branch as,</p>
+
+<pre><code>$ git push origin master
+</code></pre>
+
+<h3>
+<a id="git-diff" class="anchor" href="#git-diff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git diff</h3>
+
+<p>It is used to check the difference between two branches.</p>
+
+<pre><code>$ git diff master feature1
+</code></pre>
+
+<h3>
+<a id="delete-the-feature-branch" class="anchor" href="#delete-the-feature-branch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Delete the feature branch</h3>
+
+<p>To delete the unnecessary feature branches (but be very careful while deleting as once you delete the branch, you cannot rollback),</p>
+
+<pre><code>$ git branch -d feature1
+</code></pre>
+
 
 
 <h4>
